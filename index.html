@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar_brand">
+                <img src="logo.png" alt="logo" class="navbar_logo">
+            </div>
+            <div class="navbar_nav_items">
+                <button class="nav_item" id="orderFood" onclick="openOrderForm()">Order Food</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero_container">
+            <div class="hero_text_container">
+                <h1>Order from favorite restaurants near you.</h1>
+                <button class="nav_item" id="orderNow" onclick="openOrderForm()">Order Now</button>
+            </div>
+            <div class="hero_img_container">
+                <img src="hero.jpg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <div class="background"></div>
+    <section class="menu_container">
+        <div class="cards_container_heading">
+            <h2>Explore the Menu</h2>
+        </div>
+        <div class="cards_container">
+            <div class="cards">
+                <img src="burger.jpg" alt="">
+                <h3>Burger</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, totam.</p>
+
+            </div>
+            <div class="cards" id="card2">
+                <img src="pizza.jpg" alt="">
+                <h3>Pizza</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, totam.</p>
+
+            </div>
+            <div class="cards">
+                <img src="iceCream.jpg" alt="">
+                <h3>Ice Cream</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, totam.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="restaurant_container">
+        <div class="restaurant_text_container">
+            <h2>Order From 100s of restaurants.</h2>
+        </div>
+        <div class="restaurant_image_container">
+            <img src="restaurant1.jpg" alt="" class="img1">
+            <img src="restaurant2.jpg" alt="" class="img2">
+            <img src="restaurant3.jpg" alt="" class="img3">
+            <img src="restaurant4.jpg" alt="" class="img4">
+        </div>
+    </section>
+    <section class="update_form_container">
+        <h2>Stay Updated</h2>
+        <input type="email" placeholder="Enter Your Email"><button class="nav_item">Get Updates</button>
+    </section>
+    <section class="quote_container">
+
+        <img src="restaurant.jpg" alt="">
+
+
+        <p>When a man's stomach is full, it makes no difference whether he is rich or poor.</p>
+    </section>
+    <footer>
+        <div class="logo_title">
+            zomato
+        </div>
+        <div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Order Now</a></li>
+                <li><a href="">Menu</a></li>
+
+            </ul>
+        </div>
+    </footer>
+       <!-- Order Form Modal -->
+       <div id="orderFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeOrderForm()">&times;</span>
+            <h2>Order Form</h2>
+            <form id="orderForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="orderDetails">Order Details:</label>
+                <textarea id="orderDetails" name="orderDetails" required></textarea>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+    <script>
+                function openOrderForm() {
+    document.getElementById('orderFormModal').style.display = 'block';
+}
+
+function ssssscloseOrderForm() {
+    document.getElementById('orderFormModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById('orderFormModal')) {
+        closeOrderForm();
+    }
+}
+    </script>
+</body>
+
+</html>
